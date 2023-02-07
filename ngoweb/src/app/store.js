@@ -18,16 +18,16 @@ import {
   REGISTER, } from 'redux-persist';
 
 
-  const donateItems = localStorage.getItem('donateItems') ? JSON.parse(localStorage.getItem('donateItems')) : []
+//  const donateItems = localStorage.getItem('donateItems') ? JSON.parse(localStorage.getItem('donateItems')) : []
 
   const user = localStorage.getItem("user")
   ? JSON.parse(localStorage.getItem("user"))
   : null;
 
 const persistConfig = {
-  // key: 'root',
-  // version: 1,
-  // storage,
+  key: 'root',
+  version: 1,
+  storage,
 };
 const reducer = combineReducers({ 
   auth: authReducer,
@@ -45,9 +45,9 @@ const reducer = combineReducers({
 
 
 const initialState ={
-  selectedDnte : {
-    donateItems:donateItems
-  },
+  // selectedDnte : {
+  //   donateItems:donateItems
+  // },
   auth:{
     user:user
   }

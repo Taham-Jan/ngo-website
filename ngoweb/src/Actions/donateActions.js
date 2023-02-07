@@ -5,7 +5,7 @@ import swal from "sweetalert";
 export const getdonates = () => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_DONATE_REQUEST });
-    const { data } = await axios.get("api/donates");
+    const { data } = await axios.get("/api/donates");
     // console.log("data DonateActions", data);
     dispatch({
       type: actionTypes.GET_DONATE_SUCCESS,
@@ -25,7 +25,7 @@ export const getdonates = () => async (dispatch) => {
 export const adddonates = (newitem) => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.ADD_DONATE_REQUEST });
-    const { data } = await axios.post("api/donates/adddonates",{newitem});
+    const { data } = await axios.post("/api/donates/adddonates",{newitem});
     // console.log("data DonateActions", data);
     dispatch({
       type: actionTypes.ADD_DONATE_SUCCESS,
