@@ -1,0 +1,6 @@
+publishable_KEY = pk_test_51MPmKNGvbXw3wCHJZhqtFvSIhwhtn73348B4pRjJpeeai2ZxXtvbCEfH9vHPweCXf8rsruzCUdcUYJfiYSbszwui00FAkUkVOP
+
+Secret key = sk_test_51MPmKNGvbXw3wCHJxbrrF8PTZfdOurHYpaH5UZIqum5mtSkXcLTenZQrbRt4c5OBQAJFTbShSUdc5TnAbs9LUyz8008WT0gv25
+
+
+/api/donations
