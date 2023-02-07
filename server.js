@@ -10,9 +10,9 @@ const app = express();
 
 app.use(express.json())
 
-app.use(express.static(path.join(__dirname,'../ngoweb/build')));
+app.use(express.static(path.join(__dirname,'./ngoweb/build')));
 app.get('*',function(req,res){
-  res.sendFile(path.join(__dirname,'../ngoweb/build/index.html'));
+  res.sendFile(path.join(__dirname,'./ngoweb/build/index.html'));
 })
 const port = process.env.PORT || 5000;
 connectDB()

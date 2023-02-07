@@ -2,16 +2,16 @@
   "name": "web",
   "version": "1.0.0",
   "description": "NGO WEBSITE",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js --ignore client",
+    "start": "node server.js",
+    "server": "nodemon server.js --ignore client",
     "client": "npm start --prefix ngoweb",
     "dev": "concurrently \"npm start\" \"npm run client\"",
     "data:import": "node backend/seeder.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "ISC", 
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.1",
