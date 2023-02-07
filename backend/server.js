@@ -5,8 +5,6 @@ const dotenv = require('dotenv').config();
 const colors = require('colors');
 const { errorHandler } = require('./middleware/errorMiddleware');;
 const path = require('path')
-const port = process.env.PORT || 5000;
-connectDB()
 
 const app = express();
 
@@ -16,7 +14,8 @@ app.use(express.static(path.join(__dirname,'../ngoweb/build')));
 app.get('*',function(req,res){
   res.sendFile(path.join(__dirname,'../ngoweb/build/index.html'));
 })
-
+const port = process.env.PORT || 5000;
+connectDB()
 app.get("/", (req, res) => {
     res.json({ message: "API running..." });
   });
