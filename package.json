@@ -7,7 +7,7 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js --ignore client",
     "client": "npm start --prefix ngoweb",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm start\" \"npm run client\"",
     "data:import": "node backend/seeder.js"
   },
   "author": "",
