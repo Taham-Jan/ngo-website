@@ -32,7 +32,7 @@ dispatch(getAllDonations())
          <th>Amount</th>
          <th>Date</th>
       </tr>
-      {donations && donations.map((donation) => (
+      {donations?.length > 0 && donations?.map((donation) => (
       <tr key={donation._id}>
       <td>{donation._id}</td>
       <td>{donation.transactionId}</td>

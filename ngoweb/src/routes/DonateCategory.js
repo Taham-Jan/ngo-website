@@ -83,8 +83,8 @@ console.log("program",program)
                         className="form-control"
                       >
                          <option value="" selected disabled hidden>Choose here</option>
-                        {donate &&
-                          donate.programs.map((program) => (
+                        {donate?.length >0 &&
+                          donate?.programs.map((program) => (
                             <option key={program} value={program}>
                               {program}
                             </option>

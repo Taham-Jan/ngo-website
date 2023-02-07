@@ -59,7 +59,7 @@ const AllUserDonations = () => {
          {loading && <Loader />}
          {error && <Error error='Something Went Wrong' />}
 
-         {donations && donations.map((donation) => (
+         {donations?.length > 0 && donations?.map((donation) => (
 
            <><div class="wrapperall">
              <div class="box1 headerall"><strong>MY DONATION : {donation.createdAt.substring(0, 10)}</strong></div>

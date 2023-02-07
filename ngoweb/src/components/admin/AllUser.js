@@ -28,8 +28,8 @@ const AllUser = () => {
          <th>Date</th>
          <th>Actions</th>
       </tr>
-      {users &&
-            users.map((user) => (
+      {
+           users && users?.map((user) => (
               <tr key={user._id}>
                 <td>{user._id}</td>
                 <td>{user.name}</td>

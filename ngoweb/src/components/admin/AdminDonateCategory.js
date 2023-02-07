@@ -35,7 +35,7 @@ const AdminDonateCategory = () => {
          <th width="230">Description</th>
          <th>Actions</th>
       </tr>
-{donates && donates.map((donate) =>(
+{donates?.length > 0 && donates?.map((donate) =>(
       <tr>
          <td><img className='adminimg' src={donate.image} alt="" /></td>
          <td>{donate.name}</td>
