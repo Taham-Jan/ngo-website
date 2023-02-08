@@ -22,11 +22,11 @@ const DonateCategory = () => {
   const [program, setprogram] = useState('');
 
   useEffect(() => {
-    // if (donate && id !== donate._id) {
+     if (donate && id !== donate._id) {
 console.log("program",program)
     dispatch(getDonateDetails(id));
-    // }
-  }, [dispatch]); //, [dispatch, donate]);
+     }
+  },[dispatch, donate, id, program]); //, [dispatch, donate]);
 
   const donationHandler = () => {
     console.log(

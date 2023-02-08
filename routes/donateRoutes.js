@@ -20,6 +20,6 @@ router.post('/updatedonates',updateDonateById)
 router.post('/deletedonates',deleteDonateById)
 router.post('/adddonates',addNewDonate)
 router.get('/alldonates', getAllDonate)
-router.get('/:id', getDonateById)
+router.get('/alldonates/:id', getDonateById)
 
 module.exports = router 
