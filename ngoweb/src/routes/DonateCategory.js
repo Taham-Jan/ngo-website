@@ -22,11 +22,11 @@ const DonateCategory = () => {
   const [program, setprogram] = useState('');
 
   useEffect(() => {
-     if (donate && id !== donate._id) {
+    // if (donate && id !== donate._id) {
 console.log("program",program)
     dispatch(getDonateDetails(id));
-     }
-  },[dispatch, donate, id, program]); //, [dispatch, donate]);
+    // }
+  }, [dispatch]); //, [dispatch, donate]);
 
   const donationHandler = () => {
     console.log(
@@ -83,8 +83,8 @@ console.log("program",program)
                         className="form-control"
                       >
                          <option value="" selected disabled hidden>Choose here</option>
-                        {
-                          donate?.programs.map((program) => (
+                        {donate.programs?.length>0 &&
+                          donate.programs?.map((program) => (
                             <option key={program} value={program}>
                               {program}
                             </option>

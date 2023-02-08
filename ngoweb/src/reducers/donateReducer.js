@@ -70,10 +70,10 @@ export const getDonateDetailsReducer = (state = { donate: {} }, action) => {
         loading: false,
         error: action.payload,
       };
-    // case actionTypes.GET_DONATE_DETAILS_RESET:
-    //   return {
-    //     donate: {},
-    //   };
+    case actionTypes.GET_DONATE_DETAILS_RESET:
+      return {
+        donate: {},
+      };
     default:
       return state;
   }

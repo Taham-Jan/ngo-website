@@ -47,15 +47,14 @@ export const adddonates = (newitem) => async (dispatch) => {
 
 
 export const getDonateDetails = (id) => async (dispatch) => {
-  dispatch({ type: actionTypes.GET_DONATE_DETAILS_REQUEST });
   try {
-    
+    dispatch({ type: actionTypes.GET_DONATE_DETAILS_REQUEST });
 
-    const response = await axios.get(`/api/donates/alldonates/${id}`);
+    const { data } = await axios.get(`/api/donates/${id}`);
 
     dispatch({
       type: actionTypes.GET_DONATE_DETAILS_SUCCESS,
-      payload: response.data,
+      payload: data,
     });
   } catch (error) {
     dispatch({
