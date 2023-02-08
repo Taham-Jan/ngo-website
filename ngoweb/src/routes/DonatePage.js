@@ -16,7 +16,7 @@ const DonatePage = () => {
     dispatch(getdonates());
   }, [dispatch]);
 
-  useEffect(() => {}, [getdonation]);
+  // useEffect(() => {}, [getdonation]);
 
   return (
     <>
@@ -33,7 +33,7 @@ const DonatePage = () => {
           ) : error ? (
             <h2>{error}</h2>
           ) : (
-           donates?.length > 0 && donates?.map((donate) => (
+           donates.map((donate) => (
              <Col md={4}> 
               <DonateNow
                 key={donate._id}

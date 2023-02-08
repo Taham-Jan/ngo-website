@@ -3,7 +3,7 @@ const Donate = require("../model/donateModel")
 const getAllDonate = async (req,res) => {
     try {
         const donates = await Donate.find({})
-        res.json(donates)
+        res.send(donates);
     } catch (error) {
         console.error(error)
         res.status(500).json({message:"Server Error"})

@@ -19,7 +19,7 @@ const {getAllDonate,getDonateById,addNewDonate,updateDonateById,deleteDonateById
 router.post('/updatedonates',updateDonateById)
 router.post('/deletedonates',deleteDonateById)
 router.post('/adddonates',addNewDonate)
-router.get('/', getAllDonate)
+router.get('/alldonates', getAllDonate)
 router.get('/:id', getDonateById)
 
 module.exports = router 

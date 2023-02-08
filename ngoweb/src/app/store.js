@@ -8,7 +8,7 @@ import {getAllUsersReducer} from '../reducers/userReducer'
 import storage from 'redux-persist/lib/storage';
 import { combineReducers,getDefaultMiddleware, } from '@reduxjs/toolkit';
 import { 
-  persistStore,
+  
   persistReducer,
   FLUSH,
   REHYDRATE,

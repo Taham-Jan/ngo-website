@@ -3,13 +3,14 @@ import axios from "axios";
 import swal from "sweetalert";
 
 export const getdonates = () => async (dispatch) => {
+  dispatch({ type: actionTypes.GET_DONATE_REQUEST });
   try {
-    dispatch({ type: actionTypes.GET_DONATE_REQUEST });
-    const { data } = await axios.get("/api/donates");
+   
+    const response = await axios.get("/api/donates/alldonates");
     // console.log("data DonateActions", data);
     dispatch({
       type: actionTypes.GET_DONATE_SUCCESS,
-      payload: data,
+      payload: response.data,
     });
   } catch (error) {
     dispatch({

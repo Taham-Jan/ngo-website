@@ -1,10 +1,10 @@
 import * as actionTypes from "../Constant/donateConstant";
-const initialState = {
-  loading: false,
-  error: false,
-  donates: [],
-};
-export const getDonateReducer = (state = [initialState], action) => {
+// const initialState = {
+//   loading: false,
+//   error: false,
+//   donates: [],
+// };
+export const getDonateReducer = (state = {donates: []}, action) => {
   switch (action.type) {
     case actionTypes.GET_DONATE_REQUEST:
       return {

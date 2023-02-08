@@ -8,36 +8,17 @@
  const navigate = useNavigate()
  const {user} = useSelector((state) => state.auth)
 
- useEffect(() => {
-  if(!user) {
-    navigate('/login')
-  }
- }, [user,navigate])
+//  useEffect(() => {
+//   if(!user) {
+//     navigate('/login')
+//   }
+//  }, [user,navigate])
 
 
 return(
  
   <div className='donatemain'>
-        {/* <div className="product">
-      <img src={image} alt={name} ></img>
 
-      <div className="product__info">
-        <p className="info__name">{name}</p> 
-
-        <p className="info__description">{description.substring(0, 100)}...</p>
-
-        <p>programs</p>
-        <select>
-          {programs.map(program => (
-            <option value={program}>{program}</option>
-          ))}
-        </select>
-
-        <Link to={`/api/donates/${donationId}`} className="info__button">
-          View
-        </Link>
-      </div>
-    </div>  */}
 <div className="cards">
 <div className="card">
       <img src={image} className="card__image" alt="" />
@@ -52,7 +33,7 @@ return(
         </div>
         <center><strong><p className="card__description">{description}</p></strong></center>
   
-        <center><Link to={`/donates/${donationId}`} class="custom-btn btn-5">
+        <center><Link to={`/donates/${donationId}`} className="custom-btn btn-5">
           View
         </Link></center>
         <br/>
