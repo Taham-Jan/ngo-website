@@ -11,9 +11,6 @@ const DonatePage = () => {
   const dispatch = useDispatch();
   const getdonation = useSelector((state) => state.getdonation);
   const { donates, loading, error } = getdonation;
-  console.log("getdonation", getdonation);
-
-
   useEffect(() => {
     // dispatch(listdonations());
     dispatch(getdonates());
@@ -36,7 +33,7 @@ const DonatePage = () => {
           ) : error ? (
             <h2>{error}</h2>
           ) : (
-           donates && donates.map((donate) => (
+           donates?.length > 0 && donates?.map((donate) => (
              <Col md={4}> 
               <DonateNow
                 key={donate._id}

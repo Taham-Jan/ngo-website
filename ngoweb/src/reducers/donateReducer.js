@@ -4,7 +4,7 @@ const initialState = {
   error: false,
   donates: [],
 };
-export const getDonateReducer = (state = initialState, action) => {
+export const getDonateReducer = (state = [initialState], action) => {
   switch (action.type) {
     case actionTypes.GET_DONATE_REQUEST:
       return {

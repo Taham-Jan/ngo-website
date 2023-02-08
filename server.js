@@ -11,14 +11,12 @@ const app = express();
 app.use(express.json())
 
 app.use(express.static(path.join(__dirname,'./ngoweb/build')));
-app.get('*',function(req,res){
-  res.sendFile(path.join(__dirname,'./ngoweb/build/index.html'),function(err){
-    res.status(500).send(err);
-  });
+app.get('*',(req,res) => {
+  res.sendFile(path.resolve(__dirname,"ngoweb","build","index.html"))
 })
 const port = process.env.PORT || 5000;
 connectDB()
-app.get("/", (req, res) => {
+ app.get("/", (req, res) => {
     res.json({ message: "API running..." });
   });
 

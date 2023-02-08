@@ -2,12 +2,15 @@
   "name": "web",
   "version": "1.0.0",
   "description": "NGO WEBSITE",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "v19.6.0"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js --ignore client",
     "client": "npm start --prefix ngoweb",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm start\" \"npm run client\"",
     "data:import": "node backend/seeder.js"
   },
   "author": "",
