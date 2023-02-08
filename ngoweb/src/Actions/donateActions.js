@@ -50,7 +50,7 @@ export const getDonateDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_DONATE_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`/api/donates/donatesdetail/${id}`);
+    const { data } = await axios.get(`/api/donates/${id}`);
 
     dispatch({
       type: actionTypes.GET_DONATE_DETAILS_SUCCESS,
